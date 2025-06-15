@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,26 +12,42 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css/style.css">
 </head>
-<body >
+
+<body>
     <!--Div para el forulario-->
     <div class="bg-primary d-flex justify-content-center align-items-center vh-100">
-        
+
         <!--Inicio del forlario-->
         <form class="p-4 border rounded bg-light">
-            
+
             <!--Logo del EDUS-->
-            <img src="imagenes/logo_Edus.png" alt="logo_Edus" class="mb-3 d-block mx-auto" width="300" >
-            
+            <img src="imagenes/logo_Edus.png" alt="logo_Edus" class="mb-3 d-block mx-auto" width="300">
+
+            <div class="mb-3 mt-3">
+                <div class="dropdown text-center">
+                    <button class="btn btn-primary dropdown-toggle w-100" type="button" id="tipoIdentificacion"
+                        data-bs-toggle="dropdown" aria-expanded="false" >
+                        Tipo de Identificación
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="tipoIdentificacion">
+                        <li><a class="dropdown-item" href="#">Cédula de identidad en registro civil</a></li>
+                        <li><a class="dropdown-item" href="#">Identificación temporal/Interno</a></li>
+                        <li><a class="dropdown-item" href="#">Extranjero con identificación CCSS</a></li>
+                    </ul>
+                </div>
+            </div>
+
             <!--Div para el input de la identificación-->
             <div class="mb-3 mt-3">
                 <!--Input para insertar el número de cedula-->
                 <input type="text" class="form-control" id="id" placeholder="Identificación" name="id" required>
             </div>
-            
+
             <!--Div para la contraseña-->
             <div class="mb-3">
                 <!--Input para insertar la contraseña-->
-                <input type="password" class="form-control" id="contraseña" placeholder="Contraseña" name="contraseña" required>
+                <input type="password" class="form-control" id="contraseña" placeholder="Contraseña" name="contraseña"
+                    required>
                 <!--Div para el enlace de la contraseña olvidada-->
                 <div class="text-end mt-3">
                     <!--Enlace para recuperar la contraseña-->
@@ -46,4 +63,5 @@
         </form>
     </div>
 </body>
+
 </html>
