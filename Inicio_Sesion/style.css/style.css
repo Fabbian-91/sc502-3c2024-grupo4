@@ -12,3 +12,7 @@
   color: #007bff;
   text-decoration: none;
 }
+
+#registro:hover {
+  color: #0056b3;
+}
