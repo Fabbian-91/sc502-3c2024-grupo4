@@ -16,3 +16,8 @@
 #registro:hover {
   color: #0056b3;
 }
+
+#Correo::placeholder {
+  color: #007bff;
+  text-align: center;
+}

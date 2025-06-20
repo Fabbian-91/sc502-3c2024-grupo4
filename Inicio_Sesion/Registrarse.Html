@@ -16,50 +16,107 @@
 <body>
     <div class="bg-primary d-flex justify-content-center align-items-center vh-100">
 
-        <form class="row g-3 needs-validation p-4 border rounded bg-light" novalidate>
+        <form class="row g-3 needs-validation p-4 border rounded bg-light col-10 col-md-8 col-lg-6" novalidate>
+
             <h1 class="text-center mb-4" id="registro">Registro de Usuario</h1>
             <h2 class="mb-3" id="registro">Datos Personales</h2>
-            <div class="col-md-4">
-                <label for="validationCustom01" class="form-label">First name</label>
-                <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
-                <div class="valid-feedback">
-                    Looks good!
+
+            <div class="row mb-3">
+
+                <div class="col-xl">
+                    <div class="col-xl">
+                        <label for="validationCustom01" class="form-label">Identificación</label>
+                        <input type="text" class="form-control" id="validationCustom01" placeholder="Ingrese su identificación" required>
+                    </div>
+
                 </div>
-            </div>
-            <div class="col-md-4 ">
-                <label for="validationCustom02" class="form-label">Last name</label>
-                <input type="text" class="form-control">
+
+                <div class="col-xl">
+                    <div class="col-xl">
+                        <label for="validationCustom02" class="form-label">Nombre completo</label>
+                        <input type="text" class="form-control" placeholder="Ingrese su nombre completo" required>
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="col-md-4">
-                <label for="validationCustom03" class="form-label">City</label>
-                <input type="text" class="form-control" id="validationCustom03" required>
-                <div class="invalid-feedback">
-                    Please provide a valid city.
+            <div class="row mb-3">
+
+                <div class="col-xl">
+                    <div class="col-xl">
+                        <label for="validationCustom01" class="form-label">Primer Apellido</label>
+                        <input type="text" class="form-control" id="validationCustom01"  placeholder="Ingrese su primer apellido" required>
+                    </div>
+
                 </div>
+
+                <div class="col-xl">
+                    <div class="col-xl">
+                        <label for="validationCustom02" class="form-label">Segundo Apellido</label>
+                        <input type="text" class="form-control" placeholder="Ingrese su segundo apellido">
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="col-md-4">
-                <label for="validationCustomUsername" class="form-label">Username</label>
-                <div class="input-group">
-                    <span class="input-group-text">@</span>
-                    <input type="text" class="form-control" id="validationCustomUsername"
-                        aria-describedby="inputGroupPrepend" required>
-                    <div class="invalid-feedback">
-                        Please choose a username.
+            <h2 class="mb-3" id="registro">Datos de Contacto</h2>
+
+            <div class="row mb-3">
+
+                <div class="col-xl">
+                    <div class="col-xl">
+                        <label for="validationCustom01" class="form-label">Teléfono celular</label>
+                        <input type="text" class="form-control" id="validationCustom01"required placeholder="Ingrese su número de teléfono celular">
+                    </div>
+                </div>
+
+                <div class="col-xl">
+                    <div class="col-xl">
+                        <label for="validationCustom02" class="form-label">Teléfono habitación</label>
+                        <input type="text" class="form-control" placeholder="Ingrese su número de teléfono de habitación">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Dirección Exacta</label>
+                <input type="email" class="form-control" id="email" placeholder="Ingrese su dirección Exacta"
+                    required>
+            </div>
+
+            <h2 class="mb-3" id="registro">Datos de Acceso</h2>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico"
+                    required>
+            </div>
+
+            <div class="row mb-3">
+
+                <div class="col-xl">
+                    <div class="col-xl">
+                        <label for="validationCustom01" class="form-label">Contraseña</label>
+                        <input type="text" class="form-control" id="validationCustom01"  placeholder="Ingrese su contraseña" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl">
+                    <div class="col-xl">
+                        <label for="validationCustom02" class="form-label">Confirmar contraseña</label>
+                        <input type="text" class="form-control" placeholder="Confirme su contraseña">
                     </div>
                 </div>
             </div>
-            
-            <h2 class="mb-3" id="registro">Datos de Contacto</h2>
-
-
-
-
-
-
         </form>
     </div>
 </body>
+
 
 </html>
