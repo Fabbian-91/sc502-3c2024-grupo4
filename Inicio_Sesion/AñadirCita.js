@@ -1,6 +1,8 @@
 let contador = 1;
 let citaEnEdicion = null;
+let filaAEliminar = null;
 
+// Función principal para guardar una nueva cita o editarla
 function guardarCita() {
   const nombre = document.getElementById("nombre").value.trim();
   const id = document.getElementById("id").value.trim();
@@ -9,7 +11,7 @@ function guardarCita() {
   const tipo = document.getElementById("Tipo").value.trim();
 
   if (!nombre || !id || !fecha || !hora || !tipo) {
-    alert("Por favor, completa todos los campos.");
+    mostrarAlertaCampos();
     return;
   }
 
@@ -25,7 +27,6 @@ function guardarCita() {
     // Modo agregar
     const tabla = document.getElementById("tablaCitas");
     const fila = tabla.insertRow();
-
     fila.innerHTML = `
       <td>${contador++}</td>
       <td>${nombre}</td>
@@ -41,10 +42,13 @@ function guardarCita() {
   }
 
   document.getElementById("formularioCita").reset();
+  ocultarAlertaCampos();
+
   const modal = bootstrap.Modal.getInstance(document.getElementById("modalCita"));
   modal.hide();
 }
 
+// Cargar datos en el formulario para editar
 function editarCita(boton) {
   const fila = boton.closest("tr");
   citaEnEdicion = fila;
@@ -59,14 +63,30 @@ function editarCita(boton) {
   modal.show();
 }
 
+// Abrir modal de confirmación y guardar la fila a eliminar
 function cancelarCita(boton) {
-  if (confirm("¿Está seguro de cancelar esta cita?")) {
-    const fila = boton.closest("tr");
-    fila.remove();
-    actualizarNumeracion();
-  }
+  filaAEliminar = boton.closest("tr");
+
+  const modal = new bootstrap.Modal(document.getElementById("modalConfirmarEliminacion"));
+  modal.show();
 }
 
+// Confirmar eliminación desde el modal
+document.addEventListener("DOMContentLoaded", () => {
+  const btnConfirmarEliminar = document.getElementById("btnConfirmarEliminar");
+  btnConfirmarEliminar.addEventListener("click", () => {
+    if (filaAEliminar) {
+      filaAEliminar.remove();
+      actualizarNumeracion();
+      filaAEliminar = null;
+
+      const modal = bootstrap.Modal.getInstance(document.getElementById("modalConfirmarEliminacion"));
+      modal.hide();
+    }
+  });
+});
+
+// Recalcular los números (#) en la tabla
 function actualizarNumeracion() {
   const filas = document.querySelectorAll("#tablaCitas tr");
   contador = 1;
@@ -74,6 +94,19 @@ function actualizarNumeracion() {
     fila.cells[0].textContent = contador++;
   });
 }
+
+// Mostrar alerta si faltan campos
+function mostrarAlertaCampos() {
+  const alerta = document.getElementById("alertaCampos");
+  alerta.classList.remove("d-none");
+}
+
+// Ocultar la alerta al guardar exitosamente
+function ocultarAlertaCampos() {
+  const alerta = document.getElementById("alertaCampos");
+  alerta.classList.add("d-none");
+}
+
 
 
 
