@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Personas a Cargo - EDUS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS + Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body class="vh-100">
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+
+            <!-- Menú lateral -->
+            <div class="col-3 bg-primary d-flex flex-column pt-4">
+                <div class="mb-4">
+                    <a href="../Inicio_Sesion/Inicio.html" class="btn btn-light text-primary fw-semibold">Volver</a>
+                </div>
+                <div class="text-center mb-4">
+                    <img src="../Inicio_Sesion/imagenes/logo_Edus_Blanco.png" alt="Logo EDUS" width="300" />
+                </div>
+
+                <h5 class="text-white text-center">Consultas Médicas</h5>
+                <ul class="list-unstyled">
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm" href="Citas.html">Ver citas</a></li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm" href="AñadirCita.html">Reservar cita</a></li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm" href="HistorialMedico.html">Historial médico</a></li>
+                </ul>
+
+                <h5 class="text-white pt-4 text-center">Resultados Laboratorio</h5>
+                <ul class="list-unstyled px-2">
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm" href="ResultadosLaboratiorio.html">Ver resultados</a></li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm" href="HistorialLaboratorio.html">Historial</a></li>
+                </ul>
+
+                <h5 class="text-white pt-4 text-center">Medicamentos</h5>
+                <ul class="list-unstyled px-2">
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm" href="Receta.html">Ver recetas</a></li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm" href="HistorialReceta.html">Historial</a></li>
+                </ul>
+
+                <h5 class="text-white pt-4 text-center">Mi Perfil</h5>
+                <ul class="list-unstyled px-2">
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm" href="../Mi_Perfil/MiPerfil.Html">Mi Perfil</a></li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm" href="../Mi_Perfil/NotificacionesConfigurables.html">Notificaciones Configurables</a></li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm" href="../Mi_Perfil/PersonasACargo.html">PersonasACargo</a></li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm" href="../Mi_Perfil/SeguridadPrivacidad.html">Seguridad</a></li>
+                </ul>
+
+                <h5 class="text-white pt-4 text-center">Salida</h5>
+                <ul class="list-unstyled px-2">
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm" href="#">Salir</a></li>
+                </ul>
+            </div>
+
+            <!-- Contenido principal -->
+            <div class="col-9 bg-light p-4">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2 class="text-primary mb-0">Personas registradas</h2>
+                    <button class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#modalAgregarPersona">
+                        <i class="bi bi-person-plus"></i> Agregar Persona
+                    </button>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>#</th>
+                                <th>Nombre</th>
+                                <th>Identificación</th>
+                                <th>Parentesco</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaPersonasCargo">
+                            <tr>
+                                <td>1</td>
+                                <td>Juan Pérez Gómez</td>
+                                <td>102030405</td>
+                                <td>Hijo</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-primary" onclick="verCitas('Juan Pérez Gómez')">Ver citas</button>
+                                    <button class="btn btn-sm btn-outline-secondary" onclick="verResultados('Juan Pérez Gómez')">Ver resultados</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Agregar Persona -->
+    <div class="modal fade" id="modalAgregarPersona" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form class="modal-content needs-validation" id="formPersona" novalidate>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Agregar Persona a Cargo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="nombrePersona" class="form-label">Nombre completo</label>
+                        <input type="text" class="form-control" id="nombrePersona" required>
+                        <div class="invalid-feedback">Ingrese el nombre completo.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="idPersona" class="form-label">Número de identificación</label>
+                        <input type="text" class="form-control" id="idPersona" pattern="^\d{9}$" required>
+                        <div class="invalid-feedback">Ingrese un número de 9 dígitos.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="parentescoPersona" class="form-label">Parentesco</label>
+                        <select class="form-select" id="parentescoPersona" required>
+                            <option value="">Seleccione</option>
+                            <option>Hijo</option>
+                            <option>Hija</option>
+                            <option>Padre</option>
+                            <option>Madre</option>
+                            <option>Otro</option>
+                        </select>
+                        <div class="invalid-feedback">Seleccione el parentesco.</div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Ver Citas -->
+    <div class="modal fade" id="modalVerCitas" tabindex="-1" aria-labelledby="labelCitas" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Citas de <span id="nombreCitas"></span></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">10 julio 2025 - Control pediátrico</li>
+                        <li class="list-group-item">15 agosto 2025 - Odontología</li>
+                        <li class="list-group-item">3 septiembre 2025 - Vacunación</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Ver Resultados -->
+    <div class="modal fade" id="modalVerResultados" tabindex="-1" aria-labelledby="labelResultados" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Resultados de <span id="nombreResultados"></span></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">Hematología: Normal</li>
+                        <li class="list-group-item">Orina: Sin alteraciones</li>
+                        <li class="list-group-item">Glucosa: 88 mg/dL</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS funcional -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('formPersona');
+            const tabla = document.getElementById('tablaPersonasCargo');
+            let contador = tabla.rows.length + 1;
+
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                event.stopPropagation();
+
+                if (!form.checkValidity()) {
+                    form.classList.add('was-validated');
+                    return;
+                }
+
+                const nombre = document.getElementById('nombrePersona').value.trim();
+                const id = document.getElementById('idPersona').value.trim();
+                const parentesco = document.getElementById('parentescoPersona').value;
+
+                const nuevaFila = document.createElement('tr');
+                nuevaFila.innerHTML = `
+                    <td>${contador++}</td>
+                    <td>${nombre}</td>
+                    <td>${id}</td>
+                    <td>${parentesco}</td>
+                    <td>
+                        <button class="btn btn-sm btn-outline-primary" onclick="verCitas('${nombre}')">Ver citas</button>
+                        <button class="btn btn-sm btn-outline-secondary" onclick="verResultados('${nombre}')">Ver resultados</button>
+                    </td>
+                `;
+                tabla.appendChild(nuevaFila);
+
+                form.reset();
+                form.classList.remove('was-validated');
+                bootstrap.Modal.getInstance(document.getElementById('modalAgregarPersona')).hide();
+            });
+        });
+
+        function verCitas(nombre) {
+            document.getElementById('nombreCitas').textContent = nombre;
+            new bootstrap.Modal(document.getElementById('modalVerCitas')).show();
+        }
+
+        function verResultados(nombre) {
+            document.getElementById('nombreResultados').textContent = nombre;
+            new bootstrap.Modal(document.getElementById('modalVerResultados')).show();
+        }
+    </script>
+</body>
+
+</html>

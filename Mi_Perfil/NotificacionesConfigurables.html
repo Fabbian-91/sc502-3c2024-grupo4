@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Notificaciones Configurables - EDUS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS + Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css/style.css">
+</head>
+
+<body class="vh-100">
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+
+            <!-- Menú lateral -->
+            <div class="col-3 bg-primary d-flex flex-column pt-4">
+
+                <div class="mb-4">
+                    <a href="../Inicio_Sesion/Inicio.html" class="btn btn-light text-primary fw-semibold">Volver</a>
+                </div>
+
+                <div class="text-center mb-4">
+                    <img src="../Inicio_Sesion/imagenes/logo_Edus_Blanco.png" alt="Logo EDUS" width="300" />
+                </div>
+
+                <h5 class="text-white text-center">Consultas Médicas</h5>
+                <ul class="list-unstyled">
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+                            href="Citas.html">Ver
+                            citas</a></li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+                            href="AñadirCita.html">Reservar cita</a></li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+                            href="HistorialMedico.html">Historial médico</a></li>
+                </ul>
+
+                <h5 class="text-white pt-4 text-center">Resultados Laboratorio</h5>
+                <ul class="list-unstyled px-2">
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+                            href="ResultadosLaboratiorio.html">Ver resultados</a></li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+                            href="HistorialLaboratorio.html">Historial</a></li>
+                </ul>
+
+                <h5 class="text-white pt-4 text-center">Medicamentos</h5>
+                <ul class="list-unstyled px-2">
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+                            href="Receta.html">Ver
+                            recetas</a></li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+                            href="HistorialReceta.html">Historial</a></li>
+                </ul>
+
+                <h5 class="text-white pt-4 text-center">Mi Perfil</h5>
+                <ul class="list-unstyled px-2">
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+                            href="../Mi_Perfil/MiPerfil.Html">Mi Perfil</a></li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+                            href="../Mi_Perfil/NotificacionesConfigurables.html">Notificaciones Configurables</a></li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+                            href="../Mi_Perfil/PersonasACargo.html">PersonasACargo</a></li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+                            href="../Mi_Perfil/PersonasACargo.html">Personas a Cargo</a></li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+                            href="../Mi_Perfil/SeguridadPrivacidad.html">Seguridad</a></li>
+                </ul>
+
+                <h5 class="text-white pt-4 text-center">Salida</h5>
+                <ul class="list-unstyled px-2">
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+                            href="#">Salir</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contenido principal -->
+            <div class="col-9 bg-light p-0 d-flex">
+                <div class="container">
+                    <h2 class="mb-4 pt-4 text-primary text-center">Notificaciones Configurables</h2>
+
+                    <div class="card shadow rounded-4 p-4">
+                        <h5 class="text-primary mb-3">Preferencias de notificación</h5>
+
+                        <form>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="notiCitas" checked>
+                                <label class="form-check-label" for="notiCitas">Recordatorios de citas médicas</label>
+                            </div>
+
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="notiResultados" checked>
+                                <label class="form-check-label" for="notiResultados">Disponibilidad de resultados de
+                                    laboratorio</label>
+                            </div>
+
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="notiMedicamentos">
+                                <label class="form-check-label" for="notiMedicamentos">Estado de despacho de
+                                    medicamentos</label>
+                            </div>
+
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="notiSeguimiento">
+                                <label class="form-check-label" for="notiSeguimiento">Recordatorio de seguimiento
+                                    post-consulta</label>
+                            </div>
+
+                            <div class="form-check form-switch mb-4">
+                                <input class="form-check-input" type="checkbox" id="notiActivacion">
+                                <label class="form-check-label" for="notiActivacion">Confirmación de activación remota
+                                    de
+                                    medicamentos</label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100">Guardar preferencias</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
