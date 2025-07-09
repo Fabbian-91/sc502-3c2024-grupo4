@@ -15,13 +15,26 @@
   <div class="container-fluid h-100">
     <div class="row h-100">
 
-      <!-- Sidebar -->
-      <nav class="col-3 bg-primary text-white d-flex flex-column p-4">
-        <a href="../Inicio_Sesion/Inicio.html" class="btn btn-light text-primary fw-semibold mb-4">Volver</a>
-        <div class="text-center mb-4">
-          <img src="../Inicio_Sesion/imagenes/logo_Edus_Blanco.png" alt="Logo EDUS" class="img-fluid"
-            style="max-width: 250px;">
+      <!-- Menú lateral -->
+      <div class="col-3 bg-primary d-flex flex-column pt-4">
+
+        <div class="mb-4">
+          <a href="../Inicio_Sesion/Inicio.html" class="btn btn-light text-primary fw-semibold">Volver</a>
         </div>
+
+        <div class="text-center mb-4">
+          <img src="../Inicio_Sesion/imagenes/logo_Edus_Blanco.png" alt="Logo EDUS" width="300" />
+        </div>
+
+        <h5 class="text-white text-center">Consultas Médicas</h5>
+        <ul class="list-unstyled">
+          <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm" href="Citas.html">Ver
+              citas</a></li>
+          <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+              href="AñadirCita.html">Reservar cita</a></li>
+          <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+              href="HistorialMedico.html">Historial médico</a></li>
+        </ul>
 
         <h5 class="text-center">Resultados Laboratorio</h5>
         <ul class="list-unstyled">
@@ -31,31 +44,35 @@
               class="btn btn-light text-primary fw-semibold w-100 mb-2">Historial</a></li>
         </ul>
 
-        <h5 class="pt-4 text-center">Consultas Médicas</h5>
-        <ul class="list-unstyled">
-          <li><a href="../Consultas/Citas.html" class="btn btn-light text-primary fw-semibold w-100 mb-2">Ver citas</a>
+        <h5 class="text-white pt-4 text-center">Medicamentos</h5>
+        <ul class="list-unstyled px-2">
+          <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+              href="../Medicamentos/Medicamentos.html">Ver
+              recetas</a></li>
+          <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+              href="../Medicamentos/HistorialMedicamentos.html">Historial</a></li>
+        </ul>
+
+        <h5 class="text-white pt-4 text-center">Mi Perfil</h5>
+        <ul class="list-unstyled px-2">
+          <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+              href="../Mi_Perfil/MiPerfil.Html">Mi Perfil</a></li>
+          <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+              href="../Mi_Perfil/NotificacionesConfigurables.html">Notificaciones Configurables</a></li>
+          <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+              href="../Mi_Perfil/PersonasACargo.html">PersonasACargo</a></li>
+          <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+              href="../Mi_Perfil/PersonasACargo.html">Personas a Cargo</a></li>
+          <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+              href="../Mi_Perfil/SeguridadPrivacidad.html">Seguridad</a></li>
+        </ul>
+
+        <h5 class="text-white pt-4 text-center"></h5>
+        <ul class="list-unstyled px-2">
+          <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm" href="#">Cerrar Sesion</a>
           </li>
-          <li><a href="../Consultas/AñadirCita.html" class="btn btn-light text-primary fw-semibold w-100 mb-2">Reservar
-              cita</a></li>
-          <li><a href="../Consultas/HistorialMedico.html"
-              class="btn btn-light text-primary fw-semibold w-100 mb-2">Historial médico</a></li>
         </ul>
-
-        <h5 class="pt-4 text-center">Mi Perfil</h5>
-        <ul class="list-unstyled">
-          <li><a href="../Mi_Perfil/MiPerfil.html" class="btn btn-light text-primary fw-semibold w-100 mb-2">Mi
-              Perfil</a></li>
-          <li><a href="../Mi_Perfil/NotificacionesConfigurables.html"
-              class="btn btn-light text-primary fw-semibold w-100 mb-2">Notificaciones</a></li>
-          <li><a href="../Mi_Perfil/PersonasACargo.html"
-              class="btn btn-light text-primary fw-semibold w-100 mb-2">Personas a Cargo</a></li>
-          <li><a href="../Mi_Perfil/SeguridadPrivacidad.html"
-              class="btn btn-light text-primary fw-semibold w-100 mb-2">Seguridad</a></li>
-        </ul>
-
-        <h5 class="pt-4 text-center">Salir</h5>
-        <a href="#" class="btn btn-light text-primary fw-semibold w-100">Cerrar sesión</a>
-      </nav>
+      </div>
 
       <!-- Contenido principal -->
       <main class="col-9 bg-light p-4 overflow-auto">

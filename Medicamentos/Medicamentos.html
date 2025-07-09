@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Historial Laboratorios</title>
+  <title>Recetas del Usuario</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Bootstrap CSS + Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -66,74 +66,74 @@
               href="../Mi_Perfil/SeguridadPrivacidad.html">Seguridad</a></li>
         </ul>
 
-        <h5 class="text-white pt-4 text-center"></h5>
+        <h5 class="text-white pt-4 text-center">Salida</h5>
         <ul class="list-unstyled px-2">
-          <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm" href="#">Cerrar
-              Sesion</a>
+          <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm" href="#">Salir</a>
           </li>
         </ul>
       </div>
 
       <!-- Contenido principal -->
       <main class="col-9 bg-light p-4 overflow-auto">
-        <h2 class="text-primary text-center mb-4">Historial Laboratorios</h2>
+        <h2 class="text-primary text-center mb-4">Recetas</h2>
+
         <div class="card shadow rounded-4 p-4">
           <div class="table-responsive">
             <table class="table table-bordered align-middle">
               <thead class="table-primary">
                 <tr>
                   <th>#</th>
-                  <th>Nombre</th>
-                  <th>Identificación</th>
-                  <th>Fecha</th>
-                  <th>Médico</th>
-                  <th>Motivo</th>
-                  <th>Diagnóstico</th>
-                  <th>Receta/Tratamiento</th>
-                  <th>Observaciones</th>
+                  <th>Nombre del medicamento</th>
+                  <th>Presentación</th>
+                  <th>Dosis</th>
+                  <th>Frecuencia</th>
+                  <th>Duración</th>
+                  <th>Indicaciones</th>
+                  <th>Fecha de prescripción</th>
+                  <th>Médico tratante</th>
                   <th>Ver</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>1</td>
-                  <td>María López</td>
-                  <td>1-2345-6789</td>
-                  <td>05/07/2025</td>
-                  <td>Dr. Pérez</td>
-                  <td>Chequeo rutinario</td>
-                  <td>Saludable</td>
-                  <td>—</td>
-                  <td>Sin hallazgos.</td>
+                  <td>Amoxicilina</td>
+                  <td>Cápsulas 500 mg</td>
+                  <td>1 cápsula</td>
+                  <td>3 veces al día</td>
+                  <td>7 días</td>
+                  <td>Tomar con alimentos</td>
+                  <td>01/07/2025</td>
+                  <td>Dra. Fernández</td>
                   <td class="text-center">
-                    <button class="btn btn-sm btn-outline-primary ver-btn" data-num="1" data-nombre="María López"
-                      data-id="1-2345-6789" data-fecha="05/07/2025" data-medico="Dr. Pérez"
-                      data-motivo="Chequeo rutinario" data-diagnostico="Saludable" data-receta="—"
-                      data-observaciones="Sin hallazgos.">
+                    <button class="btn btn-sm btn-outline-primary ver-btn" data-num="1" data-nombre="Amoxicilina"
+                      data-presentacion="Cápsulas 500 mg" data-dosis="1 cápsula" data-frecuencia="3 veces al día"
+                      data-duracion="7 días" data-indicaciones="Tomar con alimentos" data-fecha="01/07/2025"
+                      data-medico="Dra. Fernández">
                       <i class="bi bi-eye"></i>
                     </button>
                   </td>
                 </tr>
                 <tr>
                   <td>2</td>
-                  <td>Carlos Ruiz</td>
-                  <td>2-9876-5432</td>
-                  <td>20/06/2025</td>
-                  <td>Dra. Gómez</td>
-                  <td>Dolor de cabeza</td>
-                  <td>Migraña</td>
-                  <td>Ibuprofeno 400mg</td>
-                  <td>Controlar dieta.</td>
+                  <td>Paracetamol</td>
+                  <td>Jarabe 120 mg/5 mL</td>
+                  <td>10 mL</td>
+                  <td>Cada 6 horas</td>
+                  <td>5 días</td>
+                  <td>No exceder 4 dosis diarias</td>
+                  <td>28/06/2025</td>
+                  <td>Dr. Gómez</td>
                   <td class="text-center">
-                    <button class="btn btn-sm btn-outline-primary ver-btn" data-num="2" data-nombre="Carlos Ruiz"
-                      data-id="2-9876-5432" data-fecha="20/06/2025" data-medico="Dra. Gómez"
-                      data-motivo="Dolor de cabeza" data-diagnostico="Migraña" data-receta="Ibuprofeno 400mg"
-                      data-observaciones="Controlar dieta.">
+                    <button class="btn btn-sm btn-outline-primary ver-btn" data-num="2" data-nombre="Paracetamol"
+                      data-presentacion="Jarabe 120 mg/5 mL" data-dosis="10 mL" data-frecuencia="Cada 6 horas"
+                      data-duracion="5 días" data-indicaciones="No exceder 4 dosis diarias" data-fecha="28/06/2025"
+                      data-medico="Dr. Gómez">
                       <i class="bi bi-eye"></i>
                     </button>
                   </td>
                 </tr>
-                <!-- Agrega más filas aquí -->
+                <!-- Más filas según necesites -->
               </tbody>
             </table>
           </div>
@@ -142,34 +142,34 @@
     </div>
   </div>
 
-  <!-- Modal Genérico -->
-  <div class="modal fade" id="modalResultado" tabindex="-1" aria-labelledby="modalResultadoLabel" aria-hidden="true">
+  <!-- Modal genérico -->
+  <div class="modal fade" id="modalReceta" tabindex="-1" aria-labelledby="modalRecetaLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content rounded-4">
         <div class="modal-header bg-primary text-white">
-          <h5 class="modal-title" id="modalResultadoLabel">Detalle de Historial</h5>
+          <h5 class="modal-title" id="modalRecetaLabel">Detalle de Receta</h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
         </div>
         <div class="modal-body">
           <dl class="row">
             <dt class="col-sm-3">#</dt>
-            <dd class="col-sm-9" id="modalNum"></dd>
-            <dt class="col-sm-3">Nombre</dt>
-            <dd class="col-sm-9" id="modalNombre"></dd>
-            <dt class="col-sm-3">Identificación</dt>
-            <dd class="col-sm-9" id="modalId"></dd>
-            <dt class="col-sm-3">Fecha</dt>
-            <dd class="col-sm-9" id="modalFecha"></dd>
-            <dt class="col-sm-3">Médico</dt>
-            <dd class="col-sm-9" id="modalMedico"></dd>
-            <dt class="col-sm-3">Motivo</dt>
-            <dd class="col-sm-9" id="modalMotivo"></dd>
-            <dt class="col-sm-3">Diagnóstico</dt>
-            <dd class="col-sm-9" id="modalDiagnostico"></dd>
-            <dt class="col-sm-3">Receta/Tratamiento</dt>
-            <dd class="col-sm-9" id="modalReceta"></dd>
-            <dt class="col-sm-3">Observaciones</dt>
-            <dd class="col-sm-9" id="modalObservaciones"></dd>
+            <dd class="col-sm-9" id="recNum"></dd>
+            <dt class="col-sm-3">Medicamento</dt>
+            <dd class="col-sm-9" id="recNombre"></dd>
+            <dt class="col-sm-3">Presentación</dt>
+            <dd class="col-sm-9" id="recPresentacion"></dd>
+            <dt class="col-sm-3">Dosis</dt>
+            <dd class="col-sm-9" id="recDosis"></dd>
+            <dt class="col-sm-3">Frecuencia</dt>
+            <dd class="col-sm-9" id="recFrecuencia"></dd>
+            <dt class="col-sm-3">Duración</dt>
+            <dd class="col-sm-9" id="recDuracion"></dd>
+            <dt class="col-sm-3">Indicaciones</dt>
+            <dd class="col-sm-9" id="recIndicaciones"></dd>
+            <dt class="col-sm-3">Fecha prescripción</dt>
+            <dd class="col-sm-9" id="recFecha"></dd>
+            <dt class="col-sm-3">Médico tratante</dt>
+            <dd class="col-sm-9" id="recMedico"></dd>
           </dl>
         </div>
         <div class="modal-footer">
@@ -181,20 +181,21 @@
 
   <!-- Bootstrap JS bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- JS para rellenar y mostrar modal -->
+  <!-- Script para rellenar y mostrar modal -->
   <script>
-    const modal = new bootstrap.Modal(document.getElementById('modalResultado'));
+    const modal = new bootstrap.Modal(document.getElementById('modalReceta'));
+
     document.querySelectorAll('.ver-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        document.getElementById('modalNum').textContent = btn.dataset.num;
-        document.getElementById('modalNombre').textContent = btn.dataset.nombre;
-        document.getElementById('modalId').textContent = btn.dataset.id;
-        document.getElementById('modalFecha').textContent = btn.dataset.fecha;
-        document.getElementById('modalMedico').textContent = btn.dataset.medico;
-        document.getElementById('modalMotivo').textContent = btn.dataset.motivo;
-        document.getElementById('modalDiagnostico').textContent = btn.dataset.diagnostico;
-        document.getElementById('modalReceta').textContent = btn.dataset.receta;
-        document.getElementById('modalObservaciones').textContent = btn.dataset.observaciones;
+        document.getElementById('recNum').textContent = btn.dataset.num;
+        document.getElementById('recNombre').textContent = btn.dataset.nombre;
+        document.getElementById('recPresentacion').textContent = btn.dataset.presentacion;
+        document.getElementById('recDosis').textContent = btn.dataset.dosis;
+        document.getElementById('recFrecuencia').textContent = btn.dataset.frecuencia;
+        document.getElementById('recDuracion').textContent = btn.dataset.duracion;
+        document.getElementById('recIndicaciones').textContent = btn.dataset.indicaciones;
+        document.getElementById('recFecha').textContent = btn.dataset.fecha;
+        document.getElementById('recMedico').textContent = btn.dataset.medico;
         modal.show();
       });
     });
