@@ -25,34 +25,46 @@
 
                 <h5 class="text-white text-center">Consultas Médicas</h5>
                 <ul class="list-unstyled">
-                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm" href="Citas.html">Ver citas</a></li>
-                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm" href="AñadirCita.html">Reservar cita</a></li>
-                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm" href="HistorialMedico.html">Historial médico</a></li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+                            href="Citas.html">Ver citas</a></li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+                            href="AñadirCita.html">Reservar cita</a></li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+                            href="HistorialMedico.html">Historial médico</a></li>
                 </ul>
 
-                <h5 class="text-white pt-4 text-center">Resultados Laboratorio</h5>
-                <ul class="list-unstyled px-2">
-                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm" href="ResultadosLaboratiorio.html">Ver resultados</a></li>
-                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm" href="HistorialLaboratorio.html">Historial</a></li>
+                <h5 class="text-center">Resultados Laboratorio</h5>
+                <ul class="list-unstyled">
+                    <li><a href="../Resultados_Laboratorios/VerResultados.html"
+                            class="btn btn-light text-primary fw-semibold w-100 mb-2">Ver actuales</a></li>
+                    <li><a href="../Resultados_Laboratorios/HistorialResultados.html"
+                            class="btn btn-light text-primary fw-semibold w-100 mb-2">Historial</a></li>
                 </ul>
 
                 <h5 class="text-white pt-4 text-center">Medicamentos</h5>
                 <ul class="list-unstyled px-2">
-                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm" href="Receta.html">Ver recetas</a></li>
-                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm" href="HistorialReceta.html">Historial</a></li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+                            href="Receta.html">Ver recetas</a></li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+                            href="HistorialReceta.html">Historial</a></li>
                 </ul>
 
                 <h5 class="text-white pt-4 text-center">Mi Perfil</h5>
                 <ul class="list-unstyled px-2">
-                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm" href="../Mi_Perfil/MiPerfil.Html">Mi Perfil</a></li>
-                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm" href="../Mi_Perfil/NotificacionesConfigurables.html">Notificaciones Configurables</a></li>
-                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm" href="../Mi_Perfil/PersonasACargo.html">PersonasACargo</a></li>
-                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm" href="../Mi_Perfil/SeguridadPrivacidad.html">Seguridad</a></li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+                            href="../Mi_Perfil/MiPerfil.Html">Mi Perfil</a></li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+                            href="../Mi_Perfil/NotificacionesConfigurables.html">Notificaciones Configurables</a></li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+                            href="../Mi_Perfil/PersonasACargo.html">PersonasACargo</a></li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+                            href="../Mi_Perfil/SeguridadPrivacidad.html">Seguridad</a></li>
                 </ul>
 
                 <h5 class="text-white pt-4 text-center">Salida</h5>
                 <ul class="list-unstyled px-2">
-                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm" href="#">Salir</a></li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-3 text-center shadow-sm"
+                            href="#">Salir</a></li>
                 </ul>
             </div>
 
@@ -60,7 +72,8 @@
             <div class="col-9 bg-light p-4">
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <h2 class="text-primary mb-0">Personas registradas</h2>
-                    <button class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="#modalAgregarPersona">
+                    <button class="btn btn-info text-white" data-bs-toggle="modal"
+                        data-bs-target="#modalAgregarPersona">
                         <i class="bi bi-person-plus"></i> Agregar Persona
                     </button>
                 </div>
@@ -83,8 +96,10 @@
                                 <td>102030405</td>
                                 <td>Hijo</td>
                                 <td>
-                                    <button class="btn btn-sm btn-outline-primary" onclick="verCitas('Juan Pérez Gómez')">Ver citas</button>
-                                    <button class="btn btn-sm btn-outline-secondary" onclick="verResultados('Juan Pérez Gómez')">Ver resultados</button>
+                                    <button class="btn btn-sm btn-outline-primary"
+                                        onclick="verCitas('Juan Pérez Gómez')">Ver citas</button>
+                                    <button class="btn btn-sm btn-outline-secondary"
+                                        onclick="verResultados('Juan Pérez Gómez')">Ver resultados</button>
                                 </td>
                             </tr>
                         </tbody>

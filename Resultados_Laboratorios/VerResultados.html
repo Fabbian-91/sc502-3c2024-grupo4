@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Resultados de laboratorio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body class="vh-100">
+
+  <div class="container-fluid h-100">
+    <div class="row h-100">
+
+      <!-- Sidebar -->
+      <nav class="col-3 bg-primary text-white d-flex flex-column p-4">
+        <a href="../Inicio_Sesion/Inicio.html" class="btn btn-light text-primary fw-semibold mb-4">Volver</a>
+        <div class="text-center mb-4">
+          <img src="../Inicio_Sesion/imagenes/logo_Edus_Blanco.png" alt="Logo EDUS" class="img-fluid"
+            style="max-width: 250px;">
+        </div>
+
+        <h5 class="text-center">Resultados Laboratorio</h5>
+        <ul class="list-unstyled">
+          <li><a href="../Resultados_Laboratorios/VerResultados.html"
+              class="btn btn-light text-primary fw-semibold w-100 mb-2">Ver actuales</a></li>
+          <li><a href="../Resultados_Laboratorios/HistorialResultados.html"
+              class="btn btn-light text-primary fw-semibold w-100 mb-2">Historial</a></li>
+        </ul>
+
+        <h5 class="pt-4 text-center">Consultas Médicas</h5>
+        <ul class="list-unstyled">
+          <li><a href="../Consultas/Citas.html" class="btn btn-light text-primary fw-semibold w-100 mb-2">Ver citas</a>
+          </li>
+          <li><a href="../Consultas/AñadirCita.html" class="btn btn-light text-primary fw-semibold w-100 mb-2">Reservar
+              cita</a></li>
+          <li><a href="../Consultas/HistorialMedico.html"
+              class="btn btn-light text-primary fw-semibold w-100 mb-2">Historial médico</a></li>
+        </ul>
+
+        <h5 class="pt-4 text-center">Mi Perfil</h5>
+        <ul class="list-unstyled">
+          <li><a href="../Mi_Perfil/MiPerfil.html" class="btn btn-light text-primary fw-semibold w-100 mb-2">Mi
+              Perfil</a></li>
+          <li><a href="../Mi_Perfil/NotificacionesConfigurables.html"
+              class="btn btn-light text-primary fw-semibold w-100 mb-2">Notificaciones</a></li>
+          <li><a href="../Mi_Perfil/PersonasACargo.html"
+              class="btn btn-light text-primary fw-semibold w-100 mb-2">Personas a Cargo</a></li>
+          <li><a href="../Mi_Perfil/SeguridadPrivacidad.html"
+              class="btn btn-light text-primary fw-semibold w-100 mb-2">Seguridad</a></li>
+        </ul>
+
+        <h5 class="pt-4 text-center">Salir</h5>
+        <a href="#" class="btn btn-light text-primary fw-semibold w-100">Cerrar sesión</a>
+      </nav>
+
+      <!-- Contenido principal -->
+      <main class="col-9 bg-light p-4 overflow-auto">
+        <h2 class="text-primary text-center mb-4">Resultados de laboratorio</h2>
+
+        <div class="card shadow rounded-4 p-4">
+          <div class="table-responsive">
+            <table class="table table-bordered align-middle">
+              <thead class="table-primary">
+                <tr>
+                  <th>#</th>
+                  <th>Nombre del examen</th>
+                  <th>Resultado</th>
+                  <th>Unidad de medida</th>
+                  <th>Valores de referencia</th>
+                  <th>Tipo de muestra</th>
+                  <th>Fecha</th>
+                  <th>Observaciones</th>
+                  <th>Ver</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Hemoglobina</td>
+                  <td>14.2</td>
+                  <td>g/dL</td>
+                  <td>12.0 – 16.0</td>
+                  <td>Sangre</td>
+                  <td>01/07/2025</td>
+                  <td>Niveles normales</td>
+                  <td class="text-center">
+                    <button class="btn btn-sm btn-outline-primary ver-btn" data-num="1" data-examen="Hemoglobina"
+                      data-resultado="14.2 g/dL" data-unidad="g/dL" data-ref="12.0 – 16.0" data-muestra="Sangre"
+                      data-fecha="01/07/2025" data-observaciones="Niveles dentro del rango normal.">
+                      <i class="bi bi-eye"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Glucosa</td>
+                  <td>105</td>
+                  <td>mg/dL</td>
+                  <td>70 – 100</td>
+                  <td>Sangre</td>
+                  <td>30/06/2025</td>
+                  <td>Levemente alta</td>
+                  <td class="text-center">
+                    <button class="btn btn-sm btn-outline-primary ver-btn" data-num="2" data-examen="Glucosa"
+                      data-resultado="105 mg/dL" data-unidad="mg/dL" data-ref="70 – 100" data-muestra="Sangre"
+                      data-fecha="30/06/2025" data-observaciones="Valor ligeramente por encima del rango.">
+                      <i class="bi bi-eye"></i>
+                    </button>
+                  </td>
+                </tr>
+                <!-- Más filas si es necesario -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Modal genérico -->
+  <div class="modal fade" id="modalResultado" tabindex="-1" aria-labelledby="modalResultadoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content rounded-4">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="modalResultadoLabel">Detalle del examen</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <dl class="row">
+            <dt class="col-sm-4">#</dt>
+            <dd class="col-sm-8" id="modalNum"></dd>
+
+            <dt class="col-sm-4">Examen</dt>
+            <dd class="col-sm-8" id="modalExamen"></dd>
+
+            <dt class="col-sm-4">Resultado</dt>
+            <dd class="col-sm-8" id="modalResultadoTexto"></dd>
+
+            <dt class="col-sm-4">Unidad de medida</dt>
+            <dd class="col-sm-8" id="modalUnidad"></dd>
+
+            <dt class="col-sm-4">Valores de referencia</dt>
+            <dd class="col-sm-8" id="modalRef"></dd>
+
+            <dt class="col-sm-4">Tipo de muestra</dt>
+            <dd class="col-sm-8" id="modalMuestra"></dd>
+
+            <dt class="col-sm-4">Fecha</dt>
+            <dd class="col-sm-8" id="modalFecha"></dd>
+
+            <dt class="col-sm-4">Observaciones</dt>
+            <dd class="col-sm-8" id="modalObservaciones"></dd>
+          </dl>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Script para llenar y mostrar modal -->
+  <script>
+    const modal = new bootstrap.Modal(document.getElementById('modalResultado'));
+
+    document.querySelectorAll('.ver-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.getElementById('modalNum').textContent = btn.dataset.num;
+        document.getElementById('modalExamen').textContent = btn.dataset.examen;
+        document.getElementById('modalResultadoTexto').textContent = btn.dataset.resultado;
+        document.getElementById('modalUnidad').textContent = btn.dataset.unidad;
+        document.getElementById('modalRef').textContent = btn.dataset.ref;
+        document.getElementById('modalMuestra').textContent = btn.dataset.muestra;
+        document.getElementById('modalFecha').textContent = btn.dataset.fecha;
+        document.getElementById('modalObservaciones').textContent = btn.dataset.observaciones;
+        modal.show();
+      });
+    });
+  </script>
+</body>
+
+</html>

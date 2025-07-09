@@ -2,143 +2,159 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Seguridad y Privacidad</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Bootstrap CSS + Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Seguridad y Privacidad</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS + Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
 <body class="vh-100">
 
-  <div class="container-fluid h-100">
-    <div class="row h-100">
+    <div class="container-fluid h-100">
+        <div class="row h-100">
 
-      <!-- Menú lateral -->
-      <aside class="col-3 bg-primary text-white p-4 d-flex flex-column">
+            <!-- Menú lateral -->
+            <aside class="col-3 bg-primary text-white p-4 d-flex flex-column">
 
-        <a href="../Inicio_Sesion/Inicio.html" class="btn btn-light text-primary fw-semibold mb-4">Volver</a>
+                <a href="../Inicio_Sesion/Inicio.html" class="btn btn-light text-primary fw-semibold mb-4">Volver</a>
 
-        <div class="text-center mb-4">
-          <img src="../Inicio_Sesion/imagenes/logo_Edus_Blanco.png" alt="Logo EDUS" class="img-fluid" style="max-width: 250px;">
+                <div class="text-center mb-4">
+                    <img src="../Inicio_Sesion/imagenes/logo_Edus_Blanco.png" alt="Logo EDUS" class="img-fluid"
+                        style="max-width: 250px;">
+                </div>
+
+                <h5 class="text-center">Consultas Médicas</h5>
+                <ul class="list-unstyled">
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-2" href="Citas.html">Ver citas</a>
+                    </li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-2" href="AñadirCita.html">Reservar
+                            cita</a></li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-2"
+                            href="HistorialMedico.html">Historial médico</a></li>
+                </ul>
+                <h5 class="text-center">Resultados Laboratorio</h5>
+                <ul class="list-unstyled">
+                    <li><a href="../Resultados_Laboratorios/VerResultados.html"
+                            class="btn btn-light text-primary fw-semibold w-100 mb-2">Ver actuales</a></li>
+                    <li><a href="../Resultados_Laboratorios/HistorialResultados.html"
+                            class="btn btn-light text-primary fw-semibold w-100 mb-2">Historial</a></li>
+                </ul>
+
+                <h5 class="pt-4 text-center">Medicamentos</h5>
+                <ul class="list-unstyled">
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-2" href="Receta.html">Ver recetas</a>
+                    </li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-2"
+                            href="HistorialReceta.html">Historial</a></li>
+                </ul>
+
+                <h5 class="pt-4 text-center">Mi Perfil</h5>
+                <ul class="list-unstyled">
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-2"
+                            href="../Mi_Perfil/MiPerfil.Html">Mi Perfil</a></li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-2"
+                            href="../Mi_Perfil/NotificacionesConfigurables.html">Notificaciones Configurables</a></li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-2"
+                            href="../Mi_Perfil/PersonasACargo.html">Personas a Cargo</a></li>
+                    <li><a class="btn btn-light text-primary fw-semibold w-100 mb-2"
+                            href="../Mi_Perfil/SeguridadPrivacidad.html">Seguridad</a></li>
+                </ul>
+
+                <h5 class="pt-4 text-center">Salida</h5>
+                <a class="btn btn-light text-primary fw-semibold w-100" href="#">Salir</a>
+            </aside>
+
+            <!-- Contenido principal -->
+            <main class="col-9 bg-light p-4 overflow-auto">
+                <div class="w-100 mx-auto" style="max-width: 650px;">
+                    <h2 class="text-primary text-center mb-4">Seguridad y Privacidad</h2>
+
+                    <div class="bg-white rounded-4 shadow p-4 mb-5">
+
+                        <h5 class="text-primary mb-3">Cambio de contraseña</h5>
+                        <form id="formPassword" novalidate>
+                            <div class="mb-3">
+                                <label for="actual" class="form-label">Contraseña actual</label>
+                                <input type="password" class="form-control" id="actual" required>
+                                <div class="invalid-feedback">Ingrese su contraseña actual.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="nueva" class="form-label">Nueva contraseña</label>
+                                <input type="password" class="form-control" id="nueva" minlength="6" required>
+                                <div class="invalid-feedback">La nueva contraseña debe tener al menos 6 caracteres.
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="confirmar" class="form-label">Confirmar nueva contraseña</label>
+                                <input type="password" class="form-control" id="confirmar" required>
+                                <div class="invalid-feedback" id="confirmFeedback">Debe confirmar correctamente la nueva
+                                    contraseña.</div>
+                            </div>
+
+                            <div id="mensajeExito" class="alert alert-success d-none text-center">¡Contraseña
+                                actualizada correctamente!</div>
+                            <button type="submit" class="btn btn-primary w-100">Actualizar contraseña</button>
+                        </form>
+
+                        <hr class="my-5">
+
+                        <h5 class="text-primary mb-3">Privacidad de la cuenta</h5>
+                        <div class="form-check form-switch mb-3">
+                            <input class="form-check-input" type="checkbox" id="ocultarCorreo">
+                            <label class="form-check-label" for="ocultarCorreo">Ocultar mi correo electrónico</label>
+                        </div>
+                        <div class="form-check form-switch mb-3">
+                            <input class="form-check-input" type="checkbox" id="ocultarHistorial">
+                            <label class="form-check-label" for="ocultarHistorial">Restringir acceso a mi historial
+                                médico</label>
+                        </div>
+                        <button class="btn btn-outline-primary w-100 mt-3" id="guardarPrivacidad">Guardar cambios de
+                            privacidad</button>
+
+                    </div>
+                </div>
+            </main>
         </div>
-
-        <h5 class="text-center">Consultas Médicas</h5>
-        <ul class="list-unstyled">
-          <li><a class="btn btn-light text-primary fw-semibold w-100 mb-2" href="Citas.html">Ver citas</a></li>
-          <li><a class="btn btn-light text-primary fw-semibold w-100 mb-2" href="AñadirCita.html">Reservar cita</a></li>
-          <li><a class="btn btn-light text-primary fw-semibold w-100 mb-2" href="HistorialMedico.html">Historial médico</a></li>
-        </ul>
-
-        <h5 class="pt-4 text-center">Resultados Laboratorio</h5>
-        <ul class="list-unstyled">
-          <li><a class="btn btn-light text-primary fw-semibold w-100 mb-2" href="ResultadosLaboratiorio.html">Ver resultados</a></li>
-          <li><a class="btn btn-light text-primary fw-semibold w-100 mb-2" href="HistorialLaboratorio.html">Historial</a></li>
-        </ul>
-
-        <h5 class="pt-4 text-center">Medicamentos</h5>
-        <ul class="list-unstyled">
-          <li><a class="btn btn-light text-primary fw-semibold w-100 mb-2" href="Receta.html">Ver recetas</a></li>
-          <li><a class="btn btn-light text-primary fw-semibold w-100 mb-2" href="HistorialReceta.html">Historial</a></li>
-        </ul>
-
-        <h5 class="pt-4 text-center">Mi Perfil</h5>
-        <ul class="list-unstyled">
-          <li><a class="btn btn-light text-primary fw-semibold w-100 mb-2" href="../Mi_Perfil/MiPerfil.Html">Mi Perfil</a></li>
-          <li><a class="btn btn-light text-primary fw-semibold w-100 mb-2" href="../Mi_Perfil/NotificacionesConfigurables.html">Notificaciones Configurables</a></li>
-          <li><a class="btn btn-light text-primary fw-semibold w-100 mb-2" href="../Mi_Perfil/PersonasACargo.html">Personas a Cargo</a></li>
-          <li><a class="btn btn-light text-primary fw-semibold w-100 mb-2" href="../Mi_Perfil/SeguridadPrivacidad.html">Seguridad</a></li>
-        </ul>
-
-        <h5 class="pt-4 text-center">Salida</h5>
-        <a class="btn btn-light text-primary fw-semibold w-100" href="#">Salir</a>
-      </aside>
-
-      <!-- Contenido principal -->
-      <main class="col-9 bg-light p-4 overflow-auto">
-        <div class="w-100 mx-auto" style="max-width: 650px;">
-          <h2 class="text-primary text-center mb-4">Seguridad y Privacidad</h2>
-
-          <div class="bg-white rounded-4 shadow p-4 mb-5">
-
-            <h5 class="text-primary mb-3">Cambio de contraseña</h5>
-            <form id="formPassword" novalidate>
-              <div class="mb-3">
-                <label for="actual" class="form-label">Contraseña actual</label>
-                <input type="password" class="form-control" id="actual" required>
-                <div class="invalid-feedback">Ingrese su contraseña actual.</div>
-              </div>
-              <div class="mb-3">
-                <label for="nueva" class="form-label">Nueva contraseña</label>
-                <input type="password" class="form-control" id="nueva" minlength="6" required>
-                <div class="invalid-feedback">La nueva contraseña debe tener al menos 6 caracteres.</div>
-              </div>
-              <div class="mb-4">
-                <label for="confirmar" class="form-label">Confirmar nueva contraseña</label>
-                <input type="password" class="form-control" id="confirmar" required>
-                <div class="invalid-feedback" id="confirmFeedback">Debe confirmar correctamente la nueva contraseña.</div>
-              </div>
-
-              <div id="mensajeExito" class="alert alert-success d-none text-center">¡Contraseña actualizada correctamente!</div>
-              <button type="submit" class="btn btn-primary w-100">Actualizar contraseña</button>
-            </form>
-
-            <hr class="my-5">
-
-            <h5 class="text-primary mb-3">Privacidad de la cuenta</h5>
-            <div class="form-check form-switch mb-3">
-              <input class="form-check-input" type="checkbox" id="ocultarCorreo">
-              <label class="form-check-label" for="ocultarCorreo">Ocultar mi correo electrónico</label>
-            </div>
-            <div class="form-check form-switch mb-3">
-              <input class="form-check-input" type="checkbox" id="ocultarHistorial">
-              <label class="form-check-label" for="ocultarHistorial">Restringir acceso a mi historial médico</label>
-            </div>
-            <button class="btn btn-outline-primary w-100 mt-3" id="guardarPrivacidad">Guardar cambios de privacidad</button>
-
-          </div>
-        </div>
-      </main>
     </div>
-  </div>
 
-  <!-- Bootstrap JS Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Validación JS -->
-  <script>
-    document.getElementById('formPassword').addEventListener('submit', function (e) {
-      e.preventDefault();
+    <!-- Validación JS -->
+    <script>
+        document.getElementById('formPassword').addEventListener('submit', function (e) {
+            e.preventDefault();
 
-      const form = e.target;
-      const actual = document.getElementById('actual');
-      const nueva = document.getElementById('nueva');
-      const confirmar = document.getElementById('confirmar');
-      const confirmFeedback = document.getElementById('confirmFeedback');
-      const mensajeExito = document.getElementById('mensajeExito');
+            const form = e.target;
+            const actual = document.getElementById('actual');
+            const nueva = document.getElementById('nueva');
+            const confirmar = document.getElementById('confirmar');
+            const confirmFeedback = document.getElementById('confirmFeedback');
+            const mensajeExito = document.getElementById('mensajeExito');
 
-      mensajeExito.classList.add('d-none');
-      confirmar.classList.remove('is-invalid');
-      form.classList.add('was-validated');
+            mensajeExito.classList.add('d-none');
+            confirmar.classList.remove('is-invalid');
+            form.classList.add('was-validated');
 
-      if (!form.checkValidity()) return;
+            if (!form.checkValidity()) return;
 
-      if (nueva.value !== confirmar.value) {
-        confirmar.classList.add('is-invalid');
-        confirmFeedback.textContent = "Las contraseñas no coinciden.";
-        return;
-      }
+            if (nueva.value !== confirmar.value) {
+                confirmar.classList.add('is-invalid');
+                confirmFeedback.textContent = "Las contraseñas no coinciden.";
+                return;
+            }
 
-      mensajeExito.classList.remove('d-none');
-      form.reset();
-      form.classList.remove('was-validated');
-    });
+            mensajeExito.classList.remove('d-none');
+            form.reset();
+            form.classList.remove('was-validated');
+        });
 
-    document.getElementById('guardarPrivacidad').addEventListener('click', function () {
-      alert('Cambios de privacidad guardados correctamente.');
-    });
-  </script>
+        document.getElementById('guardarPrivacidad').addEventListener('click', function () {
+            alert('Cambios de privacidad guardados correctamente.');
+        });
+    </script>
 </body>
 
 </html>
